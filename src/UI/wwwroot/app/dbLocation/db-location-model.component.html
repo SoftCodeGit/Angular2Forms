@@ -1,0 +1,40 @@
+﻿<h3>Designate your Database</h3>
+<div *ngIf="isEdit">
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>
+                    Database Server:
+                    <span class="label label-default">{{dbLocation.serverName}}</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>
+                Database Name:
+                <span class="label label-default">{{dbLocation.dbName}}</span>
+            </h4>
+        </div>
+    </div>
+</div>
+<div *ngIf="!isEdit">
+    <div class="row">
+        <div class="col-sm-5">
+            <h4>Database Server:</h4>
+            <input type="text" class="form-control" id="dbServer" placeholder="Enter database server name here, e.g., TARGHEE" [(ngModel)]="dbLocationEdit.serverName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-5">
+            <h4>Database Name:</h4>
+            <input type="text" class="form-control" id="dbName" placeholder="Enter database name here, e.g., BookmarkTool " [(ngModel)]="dbLocationEdit.dbName" />
+        </div>
+    </div>
+</div>
+<div class="top-buffer-std buttom-buffer-std">
+    <button class="btn btn-primary" type="button" (click)="onDbLocationClicked()">{{buttonText}}</button>
+    <button class="btn btn-warning" type="button" *ngIf="showCancelButton()" (click)="onDbLocationCancelClicked()">Cancel</button>
+</div>
+

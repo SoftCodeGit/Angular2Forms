@@ -1,0 +1,1 @@
+//# sourceMappingURL=C:/Users/arthur.lee/Documents/Visual Studio 2015/Projects/Angular2Forms/src/UI/wwwroot/app/bookmark/bookmark-list.service.js.map

@@ -1,0 +1,17 @@
+﻿<div>
+    <form [ngFormModel]="checkboxForm" (ngSubmit) ="onSubmitClicked(checkboxForm.value)">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"  [ngFormControl]="checkboxForm.controls['one']"/> One
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"  [ngFormControl]="checkboxForm.controls['two']" /> Two
+            </label>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">GO</button>
+        </div>
+    </form>
+</div>

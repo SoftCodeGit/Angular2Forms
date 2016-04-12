@@ -1,0 +1,19 @@
+﻿<div>
+    <form [ngFormModel]="radioForm" (ngSubmit)="onSubmitClicked(radioForm.value)">
+        <div class="radio">
+            <label>
+                <input type="radio" name="disOrDat" [ngFormModel]="radioForm.controls['dis']" value="Dis">Dis
+            </label>
+            <label>
+                <input type="radio" name="disOrDat" [ngFormModel]="radioForm.controls['dis']" value="Dat">Dat
+            </label>
+        </div>
+
+        <!--<label><input type="radio" name="food" [ngFormModel]="radioForm.controls['foodChicken']">Chicken</label>
+        <label><input type="radio" name="food" [ngFormModel]="radioForm.controls['foodFish']">Fish</label>-->
+
+            <div class="top-buffer-std buttom-buffer-std">
+                <button class="btn btn-primary" type="submit">Save</button>
+            </div>
+</form>
+</div>
